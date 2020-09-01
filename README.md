@@ -1,3 +1,8 @@
-# Umail
+<h1 align="center">
+  📦 Umail
+</h1>
 
-- [ ] Arrumar o Readme.md depois
+
+## 📫 Sobre o projeto
+
+Este é um App que funciona como uma rastreio de encomendas do correio, ele exibe informações sobre seu pacote.
