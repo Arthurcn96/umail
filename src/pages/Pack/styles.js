@@ -23,7 +23,7 @@ export default StyleSheet.create({
     search: {
         width: Dimensions.get('screen').width*0.9,
         height: 50,
-        bottom: 750, 
+        bottom: Dimensions.get('screen').height - Constants.statusBarHeight - 20 , 
         backgroundColor: '#FFFE',
         borderRadius: 30,
         marginHorizontal: 20,

@@ -17,6 +17,12 @@ export default class Pack extends React.Component {
         <MapView style={styles.mapStyle} 
         provider = { MapView.PROVIDER_GOOGLE }
         customMapStyle = { generatedMapStyle }
+        initialRegion={{
+          latitude: -18.72011,
+          longitude: -39.85891,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
       />
 
         <View>
