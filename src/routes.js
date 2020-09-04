@@ -12,7 +12,8 @@ export default function Routes() {
     <NavigationContainer>
 
       <AppStack.Navigator screenOptions={{ headerShown: false}}>
-      <AppStack.Screen name= "Detail" component={Detail} />
+        <AppStack.Screen name= "Detail" component={Detail} />
+        <AppStack.Screen name= "Pack" component={Pack} />
       </AppStack.Navigator>
 
     </NavigationContainer>

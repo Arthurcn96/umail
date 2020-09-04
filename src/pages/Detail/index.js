@@ -33,6 +33,12 @@ export default class Pack extends React.Component {
               <Text style={styles.packProperty}> Local:</Text>
               <Text style={styles.packValue}> Vitória </Text>
 
+              <TouchableOpacity
+                    style={styles.packDetailsButton}
+                    onPress={() => {}}
+                  ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
+              </TouchableOpacity>
+
               {/* TODO
                   Criar um jeito de mostrar(Postado, encaminhado, entregue) */}
           </View>

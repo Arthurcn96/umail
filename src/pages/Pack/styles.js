@@ -18,6 +18,7 @@ export default StyleSheet.create({
     },
     mapStyle: {
       width: Dimensions.get('screen').width,
+    //   height: 500,
       height: Dimensions.get('screen').height,
     },
     search: {
@@ -30,17 +31,31 @@ export default StyleSheet.create({
         paddingHorizontal: 30
 
     },
-    packList: {
-        bottom: 230,
+
+    packView: {
+        position: 'absolute',
+        width: '95%',
+        paddingLeft: '5%',
+        marginTop: 80,
+        height: 800,
+
     },
+
+    packList: {
+        bottom: 250,
+        flexDirection: 'row', // Deixa os itens um do lado do outro
+        alignItems: 'center' //Coloca o texto na direita
+    },
+
     pack: {
+        
         padding: 24,
         borderRadius: 8,
         marginBottom:12,
         marginLeft: 20,
         width:150,
         backgroundColor: '#FFFC',
-        bottom: 40,
+        bottom: 20,
     },
 
 

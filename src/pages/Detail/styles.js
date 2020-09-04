@@ -34,6 +34,49 @@ export default StyleSheet.create({
     description: {
         fontSize: 16,
         lineHeight: 24,
+        marginBottom: 16,
         color: '#737380'
+        
+    },
+
+    // Package's Styles
+
+    packList: {
+        bottom: 32,
+    },
+    pack: {
+        padding: 24,
+        borderRadius: 8,
+        backgroundColor: '#FFFC',
+        marginBottom: 16,
+    },
+
+
+    packProperty: {
+        fontSize: 14,
+        color: '#41414d',
+        fontWeight: 'bold',
+    },
+
+    packValue: {
+        marginTop: 2,
+        fontSize: 15,
+        marginBottom: 24,
+        color: '#737380'
+    },
+
+    packDetailsButton: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+
+    packDetailsButtonText: {
+        color: '#ffc93c',
+
+        fontSize: 15,
+        fontWeight: 'bold',
     }
+
+
 })

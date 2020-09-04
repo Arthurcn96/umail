@@ -1,6 +1,6 @@
 import React from 'react';
 import MapView from 'react-native-maps';
-import { Text, View, TextInput } from 'react-native';
+import { Text, View, TextInput, FlatList} from 'react-native';
 
 // TODO
 // https://reactnative.dev/docs/view
@@ -34,7 +34,9 @@ export default class Pack extends React.Component {
           />
         </View>
 
-        <View style={{horizontal: true, flexDirection: "row",bottom: 230}}>
+        
+
+        <View style={styles.packList}>
 
                 <View style={styles.pack}>
                   <Text style={styles.packProperty}> Previsão Entrega:</Text>
@@ -64,8 +66,22 @@ export default class Pack extends React.Component {
                   </TouchableOpacity>
                 </View>
 
+                <View style={styles.pack}>
+                  <Text style={styles.packProperty}> Previsão Entrega:</Text>
+                  <Text style={styles.packValue}> 14/11/20</Text>
 
+                  <Text style={styles.packProperty}> Local:</Text>
+                  <Text style={styles.packValue}> São Mateus </Text>
+
+                  <TouchableOpacity
+                    style={styles.packDetailsButton}
+                    onPress={() => {}}
+                  ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
+                  </TouchableOpacity>
+                </View>
           </View>
+
+
 
       </View>
     );
