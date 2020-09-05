@@ -1,5 +1,6 @@
 import React from 'react';
 import MapView from 'react-native-maps';
+import { useNavigation } from '@react-navigation/native'
 import { Text, View, TextInput, FlatList} from 'react-native';
 
 // TODO
@@ -9,10 +10,14 @@ import styles from  './styles'
 import generatedMapStyle from './generatedMap.json'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class Pack extends React.Component {
-  render() {
+export default function Pack() {
+  const navigation = useNavigation();
+  
+  function navigateToDetail(){
+    navigation.navigate('Detail');
+  }
+  
     return (
-      
       <View style={styles.container}>
         <MapView style={styles.mapStyle} 
         provider = { MapView.PROVIDER_GOOGLE }
@@ -47,7 +52,7 @@ export default class Pack extends React.Component {
 
                   <TouchableOpacity
                     style={styles.packDetailsButton}
-                    onPress={() => {}}
+                    onPress={navigateToDetail}
                   ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
                   </TouchableOpacity>
                 </View>
@@ -61,7 +66,7 @@ export default class Pack extends React.Component {
 
                   <TouchableOpacity
                     style={styles.packDetailsButton}
-                    onPress={() => {}}
+                    onPress={navigateToDetail}
                   ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
                   </TouchableOpacity>
                 </View>
@@ -85,5 +90,4 @@ export default class Pack extends React.Component {
 
       </View>
     );
-  }
 }

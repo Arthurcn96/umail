@@ -1,14 +1,37 @@
-import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants'
+import { StyleSheet, Dimensions } from 'react-native';
+import Constants from 'expo-constants';
+
+const { width, heigh } = Dimensions.get('screen')
 
 export default StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 24,
-        paddingTop: Constants.statusBarHeight + 20
+
+        
     },
 
+    topPart: {
+        backgroundColor: '#ffc93c',
+        paddingHorizontal: 24,
+        paddingTop: Constants.statusBarHeight + 20,
+        borderBottomRightRadius: 25,
+        borderBottomLeftRadius: 25
+
+
+
+        
+    },
+
+    downPart: {
+        paddingHorizontal: 24,
+        paddingTop: 16,
+        // borderTopLeftRadius: 50,
+        backgroundColor: '#FFF'
+    },
+
+
     header:{
+        
         flexDirection: 'row', // Deixa os itens um do lado do outro
         justifyContent: 'space-between', // Adiciona um expaço entre logo e texto
         alignItems: 'center' //Coloca o texto na direita
@@ -16,7 +39,8 @@ export default StyleSheet.create({
 
     headerText: {
         fontSize: 15,
-        color: '#737380'
+        color: '#434350'
+        
     },
 
     headerTextBold: {
@@ -26,7 +50,7 @@ export default StyleSheet.create({
     title: {
         fontSize: 30,
         marginBottom: 16,
-        marginTop: 48,
+        marginTop: 24,
         color: '#13131a',
         fontWeight: 'bold'
     },
@@ -35,19 +59,18 @@ export default StyleSheet.create({
         fontSize: 16,
         lineHeight: 24,
         marginBottom: 16,
-        color: '#737380'
-        
+        color: '#131320',        
     },
 
     // Package's Styles
 
     packList: {
-        bottom: 32,
+        bottom: 6,
     },
     pack: {
         padding: 24,
         borderRadius: 8,
-        backgroundColor: '#FFFC',
+        backgroundColor: '#07689f22',
         marginBottom: 16,
     },
 

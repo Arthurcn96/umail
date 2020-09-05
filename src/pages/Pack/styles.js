@@ -1,8 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import Constants from 'expo-constants'
-import { ScrollView } from 'react-native-gesture-handler';
-import { ScreenStackHeaderCenterView } from 'react-native-screens';
 
 
 export const meuc = styled.ScrollView`
@@ -42,7 +40,7 @@ export default StyleSheet.create({
     },
 
     packList: {
-        bottom: 250,
+        bottom: 300,
         flexDirection: 'row', // Deixa os itens um do lado do outro
         alignItems: 'center' //Coloca o texto na direita
     },
@@ -79,7 +77,7 @@ export default StyleSheet.create({
     },
 
     packDetailsButtonText: {
-        color: '#e02041',
+        color: '#ffc93c',
         fontSize: 15,
         fontWeight: 'bold',
     }
