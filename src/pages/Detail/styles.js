@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import Constants from 'expo-constants';
 
-const { width, heigh } = Dimensions.get('screen')
+const { width, heigh } = Dimensions.get('screen');
 
 export default StyleSheet.create({
     container: {
