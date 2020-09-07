@@ -12,14 +12,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Pack() {
   const navigation = useNavigation();
-  
+
   function navigateToDetail(){
     navigation.navigate('Detail');
   }
-  
+
     return (
       <View style={styles.container}>
-        <MapView style={styles.mapStyle} 
+        <MapView style={styles.mapStyle}
         provider = { MapView.PROVIDER_GOOGLE }
         customMapStyle = { generatedMapStyle }
         initialRegion={{
@@ -39,51 +39,19 @@ export default function Pack() {
           />
         </View>
 
-        
+
 
         <View style={styles.packList}>
 
                 <View style={styles.pack}>
-                  <Text style={styles.packProperty}> Previsão Entrega:</Text>
-                  <Text style={styles.packValue}> 05/04/21</Text>
-
-                  <Text style={styles.packProperty}> Local:</Text>
-                  <Text style={styles.packValue}> Vitória </Text>
-
                   <TouchableOpacity
                     style={styles.packDetailsButton}
                     onPress={navigateToDetail}
-                  ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
+                  ><Text style={styles.packDetailsButtonText}> 📦 </Text>
                   </TouchableOpacity>
                 </View>
 
-                <View style={styles.pack}>
-                  <Text style={styles.packProperty}> Previsão Entrega:</Text>
-                  <Text style={styles.packValue}> 14/11/20</Text>
 
-                  <Text style={styles.packProperty}> Local:</Text>
-                  <Text style={styles.packValue}> São Mateus </Text>
-
-                  <TouchableOpacity
-                    style={styles.packDetailsButton}
-                    onPress={navigateToDetail}
-                  ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
-                  </TouchableOpacity>
-                </View>
-
-                <View style={styles.pack}>
-                  <Text style={styles.packProperty}> Previsão Entrega:</Text>
-                  <Text style={styles.packValue}> 14/11/20</Text>
-
-                  <Text style={styles.packProperty}> Local:</Text>
-                  <Text style={styles.packValue}> São Mateus </Text>
-
-                  <TouchableOpacity
-                    style={styles.packDetailsButton}
-                    onPress={() => {}}
-                  ><Text style={styles.packDetailsButtonText}> Mais Detalhes</Text>
-                  </TouchableOpacity>
-                </View>
           </View>
 
 
