@@ -19,6 +19,7 @@ export default function Pack() {
 
     return (
       <View style={styles.container}>
+
         <MapView style={styles.mapStyle}
         provider = { MapView.PROVIDER_GOOGLE }
         customMapStyle = { generatedMapStyle }
@@ -28,7 +29,7 @@ export default function Pack() {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-      />
+        />
 
         <View>
           <TextInput
@@ -38,8 +39,6 @@ export default function Pack() {
 
           />
         </View>
-
-
 
         <View style={styles.packList}>
 
@@ -51,10 +50,7 @@ export default function Pack() {
                   </TouchableOpacity>
                 </View>
 
-
           </View>
-
-
 
       </View>
     );
