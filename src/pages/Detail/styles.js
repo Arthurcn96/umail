@@ -6,32 +6,37 @@ const { width, heigh } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-
-        
+        // backgroundColor: '#ffc93c',
     },
 
     topPart: {
-        backgroundColor: '#ffc93c',
+        backgroundColor: '#FFC740',
         paddingHorizontal: 24,
+        paddingBottom:10,
         paddingTop: Constants.statusBarHeight + 20,
+        // borderBottomRightRadius: 25,
+        // borderBottomLeftRadius: 25
+
+    },
+
+    middle: {
+        backgroundColor: '#FFCE59',
+        paddingHorizontal: 24,
+        paddingBottom:10,
         borderBottomRightRadius: 25,
         borderBottomLeftRadius: 25
 
-
-
-        
     },
 
     downPart: {
         paddingHorizontal: 24,
         paddingTop: 16,
-        // borderTopLeftRadius: 50,
-        backgroundColor: '#FFF'
+        backgroundColor: '#F9F9F9'
     },
 
 
     header:{
-        
+
         flexDirection: 'row', // Deixa os itens um do lado do outro
         justifyContent: 'space-between', // Adiciona um expaço entre logo e texto
         alignItems: 'center' //Coloca o texto na direita
@@ -40,13 +45,13 @@ export default StyleSheet.create({
     headerText: {
         fontSize: 15,
         color: '#434350'
-        
+
     },
 
     headerTextBold: {
         fontWeight: 'bold',
     },
-    
+
     title: {
         fontSize: 30,
         marginBottom: 16,
@@ -59,47 +64,66 @@ export default StyleSheet.create({
         fontSize: 16,
         lineHeight: 24,
         marginBottom: 16,
-        color: '#131320',        
+        color: '#131320',
     },
 
-    // Package's Styles
+    // Pacote
 
     packList: {
-        bottom: 6,
+
     },
+
     pack: {
-        padding: 24,
-        borderRadius: 8,
-        backgroundColor: '#07689f22',
-        marginBottom: 16,
+
+        padding: 40,
+        paddingBottom:25,
+        borderRadius: 32,
+        backgroundColor: '#FFF',
+        // margin: 30,
+        // marginBottom: 5,
+
     },
 
 
     packProperty: {
-        fontSize: 14,
+        fontFamily: 'Roboto',
+        fontSize: 16,
         color: '#41414d',
         fontWeight: 'bold',
     },
 
     packValue: {
-        marginTop: 2,
-        fontSize: 15,
+        marginTop: 6,
+        paddingLeft:30,
+        fontSize: 14,
         marginBottom: 24,
         color: '#737380'
     },
 
     packDetailsButton: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+      alignItems: 'center',
     },
 
     packDetailsButtonText: {
-        color: '#ffc93c',
 
-        fontSize: 15,
-        fontWeight: 'bold',
-    }
+        color: '#FFF',
+        backgroundColor: "#105081",
+        padding: 10,
+        width:102,
+        borderRadius:30,
+        textAlign: 'center',
+        fontSize: 14,
+
+    },
+    separator: {
+    margin:20,
+    borderBottomColor: '#ffc93c',
+    borderBottomWidth: 1,
+    alignSelf:"center",
+    width:200,
+
+
+  }
 
 
 })
