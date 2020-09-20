@@ -28,9 +28,7 @@ export default StyleSheet.create({
 
     downPart: {
         paddingHorizontal: 50,
-        top:10,
-        bottom:10,
-        height: 500,
+        // height: 500,
         backgroundColor: '#F9F9F9'
     },
 
@@ -72,7 +70,7 @@ export default StyleSheet.create({
     },
 
     pack: {
-
+        marginTop:20,
         padding: 40,
         paddingBottom:25,
         borderRadius: 32,
@@ -114,7 +112,7 @@ export default StyleSheet.create({
 
     },
     separator: {
-    margin:20,
+    marginTop:20,
     borderBottomColor: '#ffc93c',
     borderBottomWidth: 1,
     alignSelf:"center",

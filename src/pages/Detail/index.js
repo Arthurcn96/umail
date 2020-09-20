@@ -21,7 +21,7 @@ export default function Detail() {
 
       <View style={styles.container}>
 
-      <View style={{ ...StyleSheet.absoluteFillObject,backgroundColor: "#F5F2F2"}}/>
+      <View style={{ ...StyleSheet.absoluteFillObject,backgroundColor: "#F9F9F9"}}/>
         <View style={styles.topPart}>
             <View style={styles.header}>
               <Image source={logoImg}/>
@@ -50,27 +50,27 @@ export default function Detail() {
               renderItem={()=>(
                 <View>
 
-                <View style={styles.pack}>
+                  <View style={styles.pack}>
 
-                    <Text style={styles.packProperty}><Feather name="calendar" size={20} color="black"/>   Previsão Entrega:</Text>
-                    <Text style={styles.packValue}>05/04/21</Text>
-
-
-                    <Text style={styles.packProperty}><Feather name="map" size={20} color="black"/>   Local:</Text>
-                    <Text style={styles.packValue}>Vitória </Text>
-
-                    <TouchableOpacity
-                          style={styles.packDetailsButton}
-                          onPress={navigateToPack}
-                        ><Text style={styles.packDetailsButtonText}> Saiba mais</Text>
-                    </TouchableOpacity>
-
-                    {/* TODO
-                        Criar um jeito de mostrar(Postado, encaminhado, entregue) */}
+                      <Text style={styles.packProperty}><Feather name="calendar" size={20} color="black"/>   Previsão Entrega:</Text>
+                      <Text style={styles.packValue}>05/04/21</Text>
 
 
-                </View>
-                <Separator />
+                      <Text style={styles.packProperty}><Feather name="map" size={20} color="black"/>   Local:</Text>
+                      <Text style={styles.packValue}>Vitória </Text>
+
+                      <TouchableOpacity
+                            style={styles.packDetailsButton}
+                            onPress={navigateToPack}
+                          ><Text style={styles.packDetailsButtonText}> Saiba mais</Text>
+                      </TouchableOpacity>
+
+                      {/* TODO
+                          Criar um jeito de mostrar(Postado, encaminhado, entregue) */}
+
+
+                  </View>
+                  <Separator />
                 </View>
 
               )}
@@ -79,7 +79,7 @@ export default function Detail() {
           </View>
 
 
-         </View>
+        </View>
 
 
       </View>
