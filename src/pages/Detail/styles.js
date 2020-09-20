@@ -1,35 +1,44 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import Constants from 'expo-constants';
 
+const primary = '#FFC740';
+const secondary = '#105081';
+const background = '#F2F2F2';
+
 const { width, height } = Dimensions.get('screen');
 
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F9F9F9',
+        backgroundColor: background,
     },
 
     topPart: {
-        backgroundColor: '#FFC740',
+        backgroundColor: primary,
         paddingHorizontal: 24,
         paddingBottom:10,
-        paddingTop: Constants.statusBarHeight + 20,
+        paddingTop: Constants.statusBarHeight + 5,
 
     },
 
     middlePart: {
-        backgroundColor: '#FFC740',
-        paddingHorizontal: 24,
-        paddingBottom:10,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25
+      padding:80,
+      backgroundColor: primary,
+      borderBottomRightRadius:75,
+      borderRadius:30,
 
+
+    },
+
+    image: {
+      ...StyleSheet.absoluteFillObject,
+      padding:10,
+      justifyContent: "center",
     },
 
     downPart: {
         paddingHorizontal: 50,
-        // height: 500,
-        backgroundColor: '#F9F9F9'
+        backgroundColor: background
     },
 
     header:{
@@ -49,18 +58,22 @@ export default StyleSheet.create({
     },
 
     title: {
+        paddingHorizontal: 24,
+        paddingBottom:10,
         fontSize: 30,
         marginBottom: 16,
         marginTop: 24,
-        color: '#13131a',
+        color: '#ECECE3',
         fontWeight: 'bold'
     },
 
     description: {
+        paddingHorizontal: 24,
+        paddingBottom:10,
         fontSize: 16,
         lineHeight: 24,
         marginBottom: 16,
-        color: '#131320',
+        color: '#ECECDF',
     },
 
     // Pacote
@@ -103,7 +116,7 @@ export default StyleSheet.create({
     packDetailsButtonText: {
 
         color: '#FFF',
-        backgroundColor: "#105081",
+        backgroundColor: secondary,
         padding: 10,
         width:102,
         borderRadius:30,
@@ -113,7 +126,7 @@ export default StyleSheet.create({
     },
     separator: {
     marginTop:20,
-    borderBottomColor: '#ffc93c',
+    borderBottomColor: primary,
     borderBottomWidth: 1,
     alignSelf:"center",
     width:200,
