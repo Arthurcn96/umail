@@ -1,12 +1,12 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import Constants from 'expo-constants';
 
-const { width, heigh } = Dimensions.get('screen');
+const { width, height } = Dimensions.get('screen');
 
 export default StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: '#ffc93c',
+        backgroundColor: '#F9F9F9',
     },
 
     topPart: {
@@ -14,13 +14,11 @@ export default StyleSheet.create({
         paddingHorizontal: 24,
         paddingBottom:10,
         paddingTop: Constants.statusBarHeight + 20,
-        // borderBottomRightRadius: 25,
-        // borderBottomLeftRadius: 25
 
     },
 
-    middle: {
-        backgroundColor: '#FFCE59',
+    middlePart: {
+        backgroundColor: '#FFC740',
         paddingHorizontal: 24,
         paddingBottom:10,
         borderBottomRightRadius: 25,
@@ -29,11 +27,12 @@ export default StyleSheet.create({
     },
 
     downPart: {
-        paddingHorizontal: 24,
-        paddingTop: 16,
+        paddingHorizontal: 50,
+        top:10,
+        bottom:10,
+        height: 500,
         backgroundColor: '#F9F9F9'
     },
-
 
     header:{
 
@@ -45,7 +44,6 @@ export default StyleSheet.create({
     headerText: {
         fontSize: 15,
         color: '#434350'
-
     },
 
     headerTextBold: {

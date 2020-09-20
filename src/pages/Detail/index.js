@@ -35,7 +35,7 @@ export default function Detail() {
 
         <View >
         {/* <View style={{...StyleSheet.absoluteFillObject,backgroundColor: '#a2d5f2'}}/>   */}
-        <View style={styles.middle}>
+        <View style={styles.middlePart}>
             <Text style={styles.title}>Bem Vindo!</Text>
             <Text style={styles.description}>Estes são os pacotes que estão sendo rastreados no momento.</Text>
         </View>
@@ -45,7 +45,7 @@ export default function Detail() {
 
               <FlatList
               style={styles.packlist}
-              data={[1, 2, 3, 4, 5]}
+              data={[1, 2, 3, 4]}
               showsVerticalScrollIndicator = {false}
               renderItem={()=>(
                 <View>
