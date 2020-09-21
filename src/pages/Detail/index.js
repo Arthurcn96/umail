@@ -5,8 +5,7 @@ import {Feather} from '@expo/vector-icons';
 
 import styles from  './styles'
 import logoImg from '../../assets/logo.png'
-
-import image from '../../assets/pack3.jpeg'
+import image from '../../assets/pacote.jpeg'
 
 const Separator = () => (
   <View style={styles.separator} />

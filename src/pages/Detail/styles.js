@@ -3,14 +3,13 @@ import Constants from 'expo-constants';
 
 const primary = '#FFC740';
 const secondary = '#105081';
-const background = '#F2F2F2';
+const background = '#F0F0F5';
 
 const { width, height } = Dimensions.get('screen');
 
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: background,
     },
 
     topPart: {
@@ -22,11 +21,10 @@ export default StyleSheet.create({
     },
 
     middlePart: {
-      padding:80,
+      padding:100,
       backgroundColor: primary,
       borderBottomRightRadius:75,
       borderRadius:30,
-
 
     },
 
@@ -61,19 +59,20 @@ export default StyleSheet.create({
         paddingHorizontal: 24,
         paddingBottom:10,
         fontSize: 30,
-        marginBottom: 16,
-        marginTop: 24,
+        margin: 24,
         color: '#ECECE3',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
 
     description: {
         paddingHorizontal: 24,
         paddingBottom:10,
-        fontSize: 16,
+        fontSize: 13,
         lineHeight: 24,
-        marginBottom: 16,
         color: '#ECECDF',
+        textAlign: 'center',
+
     },
 
     // Pacote
