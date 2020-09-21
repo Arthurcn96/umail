@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from 'react-native-modal';
 import { useNavigation } from '@react-navigation/native'
-import { ImageBackground, Text, View, Image, TouchableOpacity, FlatList, StyleSheet} from 'react-native';
+import { ImageBackground, Text, TextInput, View, Image, TouchableOpacity, FlatList, StyleSheet} from 'react-native';
 import {Feather} from '@expo/vector-icons';
+import { FloatingAction } from "react-native-floating-action";
+
+const actions = [
+  {
+    text: "Adicionar",
+    icon: require("../../../assets/favicon.png"),
+    name: "bt_accessibility",
+    position: 1
+  },
+];
+
+ var isModalVisible = false;
 
 import styles from  './styles'
 import logoImg from '../../assets/logo.png'
@@ -12,7 +25,13 @@ const Separator = () => (
 );
 
 export default function Detail() {
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [value, onChangeText] = React.useState();
   const navigation = useNavigation();
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
 
   function navigateToPack(){
     navigation.navigate('Pack');
@@ -42,6 +61,35 @@ export default function Detail() {
 
 
         <View style={styles.downPart}>
+
+        <Modal isVisible={isModalVisible}>
+
+          <View style={styles.modalWindow}>
+            <View style={styles.CircleShapeView}>
+            <Text style={styles.modalIcon}><Feather name="package" size={50} color="black"/></Text>
+            </View>
+
+            <Text style={styles.modalText}> Consulte a situação de seus objetos nos Correios: </Text>
+
+		<Form>
+
+	          <TextInput
+	    	     name = "codigo" label = "Codigo"
+	             style = {styles.search}
+	             onChangeText={text => onChangeText(text)}
+	             placeholder="Digite o Código de rastreio"
+	             value={value}
+	           />
+	           <TouchableOpacity
+	                 style={styles.modalCloseButton}
+	                 onPress={toggleModal}
+	               ><Text style={styles.modalCloseButtonText}>Rastrear</Text>
+	           </TouchableOpacity>
+
+		</Form>
+          </View>
+        </Modal>
+
           <FlatList
           style={styles.packlist}
           data={[1, 2, 3, 4]}
@@ -67,6 +115,14 @@ export default function Detail() {
           )}
           />
         </View>
+
+        <FloatingAction
+           actions={actions}
+           color='#105081'
+           onPressItem={toggleModal}
+         />
+
+
 
       </View>
 

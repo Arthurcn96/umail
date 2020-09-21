@@ -123,14 +123,67 @@ export default StyleSheet.create({
         fontSize: 14,
 
     },
+
+
+// MODAL
+    modalWindow: {
+      paddingHorizontal:40,
+      paddingBottom:25,
+      borderRadius: 32,
+      backgroundColor: '#F9F9FF',
+      // margin: 30,
+      // marginBottom: 5,
+
+    },
+    modalCloseButton: {
+      alignItems: 'center',
+    },
+
+    modalCloseButtonText: {
+        color: '#FFF',
+        backgroundColor: primary,
+        padding: 10,
+        marginTop:30,
+        width:100,
+        borderRadius:30,
+        textAlign: 'center',
+
+    },
+
+    CircleShapeView: {
+      marginTop:-60/2,
+      width: 60,
+      height: 60,
+      borderRadius: 60/2,
+      backgroundColor: '#FFF',
+      alignSelf: 'center',
+
+    },
+    modalIcon: {
+      textAlign: 'center',
+      margin:6,
+    },
+
+    modalText: {
+      textAlign: 'center',
+      margin:30,
+      fontSize:16,
+    },
+
+    search: {
+      textAlign: 'center',
+      height: 50,
+      borderRadius: 30,
+      marginHorizontal: 20,
+      paddingHorizontal: 30,
+    },
+
     separator: {
     marginTop:20,
     borderBottomColor: primary,
     borderBottomWidth: 1,
     alignSelf:"center",
     width:200,
-
-
   }
 
 

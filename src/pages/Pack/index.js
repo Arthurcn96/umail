@@ -9,12 +9,35 @@ import { Text, View, TextInput, FlatList} from 'react-native';
 import styles from  './styles'
 import generatedMapStyle from './generatedMap.json'
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { FloatingAction } from "react-native-floating-action";
+
+const actions = [
+  {
+    text: "Accessibility",
+    icon: require("../../assets/logo.png"),
+    name: "bt_accessibility",
+    position: 2
+  },
+  {
+    text: "Language",
+    icon: require("../../assets/logo.png"),
+    name: "bt_language",
+    position: 1
+  },
+];
 
 export default function Pack() {
+  const [value, onChangeText] = React.useState();
   const navigation = useNavigation();
 
   function navigateToDetail(){
     navigation.navigate('Detail');
+  }
+
+  function submit(){
+    if (true) {
+      console.log("Pronto")
+    }
   }
 
     return (
@@ -32,16 +55,17 @@ export default function Pack() {
         />
 
         <View>
+
           <TextInput
             style = {styles.search}
-            onChangeText = {text => onChangeText(text)}
-            value = 'Digite o código de Rastreio'
-
+            onChangeText={text => onChangeText(text)}
+            onEndEditing={submit()}
+            placeholder="Digite o Código do seu Pacote"
+            value={value}
           />
         </View>
 
         <View style={styles.packList}>
-
                 <View style={styles.pack}>
                   <TouchableOpacity
                     style={styles.packDetailsButton}
@@ -49,8 +73,14 @@ export default function Pack() {
                   ><Text style={styles.packDetailsButtonText}> 📦 </Text>
                   </TouchableOpacity>
                 </View>
-
           </View>
+
+          <FloatingAction
+           actions={actions}
+           onPressItem={name => {
+             console.log(`selected button: ${name}`);
+           }}
+         />
 
       </View>
     );
