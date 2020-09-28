@@ -71,8 +71,6 @@ export default function Detail() {
 
             <Text style={styles.modalText}> Consulte a situação de seus objetos nos Correios: </Text>
 
-		<Form>
-
 	          <TextInput
 	    	     name = "codigo" label = "Codigo"
 	             style = {styles.search}
@@ -86,7 +84,6 @@ export default function Detail() {
 	               ><Text style={styles.modalCloseButtonText}>Rastrear</Text>
 	           </TouchableOpacity>
 
-		</Form>
           </View>
         </Modal>
 
