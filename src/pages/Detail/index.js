@@ -102,7 +102,6 @@ export default function Detail() {
 
                   <TouchableOpacity
                         style={styles.packDetailsButton}
-                        onPress={navigateToPack}
                       ><Text style={styles.packDetailsButtonText}> Saiba mais</Text>
                   </TouchableOpacity>
                   {/* TODO: Criar um jeito de mostrar(Postado, encaminhado, entregue) */}
