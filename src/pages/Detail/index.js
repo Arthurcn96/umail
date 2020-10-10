@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import Modal from 'react-native-modal';
 import { useNavigation } from '@react-navigation/native'
-import { ImageBackground, Text, TextInput, View, Image, TouchableOpacity, FlatList, StyleSheet} from 'react-native';
+import { ImageBackground, Button, Text, TextInput, View, Image, TouchableOpacity, FlatList, StyleSheet} from 'react-native';
 import {Feather} from '@expo/vector-icons';
 import { FloatingAction } from "react-native-floating-action";
+import { Formik } from 'formik';
 
 const actions = [
   {
@@ -31,6 +32,11 @@ export default function Detail() {
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
+  };
+
+  const onSubmit = (values) => {
+    setModalVisible(!isModalVisible);
+    console.log(values.tracking.toUpperCase());
   };
 
   function navigateToPack(){
@@ -71,18 +77,34 @@ export default function Detail() {
 
             <Text style={styles.modalText}> Consulte a situação de seus objetos nos Correios: </Text>
 
-	          <TextInput
-	    	     name = "codigo" label = "Codigo"
-	             style = {styles.search}
-	             onChangeText={text => onChangeText(text)}
-	             placeholder="Digite o Código de rastreio"
-	             value={value}
-	           />
-	           <TouchableOpacity
-	                 style={styles.modalCloseButton}
-	                 onPress={toggleModal}
-	               ><Text style={styles.modalCloseButtonText}>Rastrear</Text>
-	           </TouchableOpacity>
+            <Formik
+                 initialValues={{ tracking: '' }}
+                 onSubmit={values => onSubmit(values)}>
+
+                 {({ handleChange, handleBlur, handleSubmit, values }) => (
+                   <View>
+                   <TextInput
+                      onChangeText={handleChange('tracking')}
+                      onBlur={handleBlur('tracking')}
+                      style = {styles.search}
+                      onPress={()=>{
+        this.nameOrId.focus()
+      }}
+                      name="tracking"
+                      placeholder="Digite o Código de rastreio"
+                      value={values.tracking}
+                    />
+                    <TouchableOpacity
+                         title="submit"
+                         style={styles.modalCloseButton}
+                         onPress={handleSubmit}
+                        ><Text style={styles.modalCloseButtonText}>Rastrear</Text>
+                    </TouchableOpacity>
+                   </View>
+                 )}
+               </Formik>
+
+
 
           </View>
         </Modal>
