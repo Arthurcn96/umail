@@ -3,10 +3,9 @@
 </p>
 
 <p align="center">
-
-  <img src="https://img.shields.io/github/last-commit/Arthurcn96/umail?logo=Github">
-  <img src="https://img.shields.io/github/repo-size/Arthurcn96/umail">
-  <img src="https://img.shields.io/badge/Status-Halted-red">
+  <img src="https://img.shields.io/github/last-commit/Arthurcn96/umail?logo=github&style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/Arthurcn96/umail?style=for-the-badge&logo=appveyor">
+  <img src="https://img.shields.io/badge/Sattus-Halted-red?style=for-the-badge&logo=appveyor">
 </p>
 
 
