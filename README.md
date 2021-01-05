@@ -13,7 +13,7 @@
 
 Este é um App que funciona como uma rastreio de encomendas do correio, ele exibe informações sobre seu pacote.
 
-  |Mapa|Menu|Rastreio|
+  |Mapa de Rastreio|Menu Principal|Input Rastreio|
   | -- | -- | --- |
   |![Mapa](https://raw.githubusercontent.com/Arthurcn96/umail/main/images/mapView.jpg)|![Menu Principal](https://raw.githubusercontent.com/Arthurcn96/umail/main/images/main.jpg)|![Input](https://raw.githubusercontent.com/Arthurcn96/umail/main/images/input.jpg)|
 
